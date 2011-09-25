@@ -1,7 +1,7 @@
 SmartStorage Light
 ==================
 
-This is a lightweight version of @ahume's HTML5 localStorage wrapper. It supports `get` and `set`, including expiry dates and JSON objects.
+This is a lightweight version of @ahume's HTML5 localStorage wrapper. It supports `get`, `set` and `remove`, including expiry dates and JSON objects.
 
 Examples
 --------
@@ -28,3 +28,4 @@ Methods
 
 * `set(key, val, [expiry])` - Set key to the value. Optional expiry time in milliseconds. Overrides anything that is already set.
 * `get(key)` - Get value for passed in key. Returns null if it doesn't exist.
+* `remove(key)` - Remove value for passed in key.

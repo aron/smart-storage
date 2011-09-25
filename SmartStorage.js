@@ -75,6 +75,17 @@ SmartStorage.prototype._removeItemForDb = function(key) {
 }
 
 /**
+* Removes an entry from the browser store.
+* @param {String} key The key to remove.
+*/
+SmartStorage.prototype.remove = function(key) {
+    if (arguments.length < 1) {
+        throw "SmartStorage error: remove() requires 1 argument."
+    }
+    return this._removeItemForDb(key);
+}
+
+/**
 * Set key to the value. Overrides anything that is already set.
 * @param {String} key The key to store the value against.
 * @param value The value to store.
@@ -144,4 +155,4 @@ SmartStorage.typeOf = function(value) {
         }
     }
     return s;
-}
+};

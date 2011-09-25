@@ -6,20 +6,22 @@ This is a lightweight version of @ahume's HTML5 localStorage wrapper. It support
 Examples
 --------
 
-    var store = new SmartStorage("my_store");
+```javascript
+var store = new SmartStorage("my_store");
 
-    // Store string
-    store.set("key", "value");
-    store.get("key");
-    >> "value"
+// Store string
+store.set("key", "value");
+store.get("key"); //=> "value"
+```
 
 ### Expiry
 
 Store object/hash with expiry time of 2 minutes.
 
-    store.set("my_object", {"key1": "value1", "key2": "value2"}, 120 * 1000);   // Expires in 120*1000 = 2 minutes.
-    store.get("my_object").key2;
-    >> "value2"
+```javascript
+store.set("my_object", {"key1": "value1", "key2": "value2"}, 120 * 1000);   // Expires in 120*1000 = 2 minutes.
+store.get("my_object").key2; //=> "value2"
+```
 
 Methods
 -------

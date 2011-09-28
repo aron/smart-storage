@@ -9,9 +9,13 @@ Examples
 ```javascript
 var store = new SmartStorage("my_store");
 
-// Store string
+// Store string.
 store.set("key", "value");
 store.get("key"); //=> "value"
+
+// Remove string.
+store.remove("key");
+store.get("key"); //=> null
 ```
 
 ### Expiry
@@ -19,7 +23,7 @@ store.get("key"); //=> "value"
 Store object/hash with expiry time of 2 minutes.
 
 ```javascript
-store.set("my_object", {"key1": "value1", "key2": "value2"}, 120 * 1000);   // Expires in 120*1000 = 2 minutes.
+store.set("my_object", {"key1": "value1", "key2": "value2"}, 120 * 1000); // Expires in 120*1000 = 2 minutes.
 store.get("my_object").key2; //=> "value2"
 ```
 
